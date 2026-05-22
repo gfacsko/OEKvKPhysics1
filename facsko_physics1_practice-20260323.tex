@@ -1,0 +1,118 @@
+\documentclass[t,aspectratio=169]{beamer}
+
+\usepackage{soul}
+\usepackage{tikz}
+\usepackage{multicol}
+%\usepackage{gensymb}
+\usepackage[utf8]{inputenc}
+
+\usetikzlibrary{arrows.meta}
+
+%\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    pdftitle={(KTXFI1EBNF) Physics I. Practice},
+}
+
+% ----------------------------------------------------------------------------------------------------------------------------------------
+
+\title{\includegraphics[width=45pt]{oepecsetlogo.png}\\(KTXFI1EBNF) Physics I. Practice}
+
+\author{Dr.~Gábor FACSKÓ, PhD\\\tiny Assistant Professor / Senior Research Fellow\\\textit{facsko.gabor@uni-obuda.hu}}
+
+\institute{\Tiny Óbuda University, Faculty of Electrical Engineering, 1084 Budapest, Tavaszmező u. 17.\\Wigner Research Centre for Physics, Department of Space Physics and Space Technology, 1121 Budapest, Konkoly-Thege Miklós út 29–33.\\ \url{https://wigner.hu/~facsko.gabor}}
+
+\date{March~23,~2026}
+
+\logo{\includegraphics[height=0.9 true cm]{kekcsik.png}}
+
+% ----------------------------------------------------------------------------------------------------------------------------------------
+
+\begin{document}
+
+\frame{\titlepage}
+
+% ----------------------------------------------------------------------------------------------------------------------------------------
+
+\begin{frame}[fragile,squeeze,allowframebreaks]
+\frametitle{Exercises}
+\begin{itemize}
+\setlength{\parskip}{0pt}
+\setlength{\itemsep}{0pt}
+\item \textbf{Thermodynamics I:} Temperature scales, thermal expansion, thermometers. State variables, ideal gas, state changes, ideal gas equation of state, Boyle’s law, Gay-Lussac’s laws, universal (combined) gas law, heat, specific heat, molar heat, heat capacity.
+\item \textbf{Thermodynamics II:} Expansion work, internal energy, the first law of thermodynamics, forms of the first law in different state changes.
+\item \textbf{Thermodynamics III:} Cyclic processes, Carnot cycle, Carnot’s theorem, reduced heat, entropy, the second law of thermodynamics.
+  
+\pagebreak
+\item Problems:
+\begin{enumerate}
+\setcounter{enumi}{6}   
+\item With one mole of monoatomic, ideal gas at $27\,{}^{\circ}C$, we supply 8.31 Wh of heat while the pressure remains constant (slow process).
+\begin{enumerate}
+\item[(a)] What will be the achieved temperature?
+\item[(b)] How much does the internal energy of the gas change?
+\item[(c)] What is the volume work done by the gas?
+\end{enumerate}
+
+\item We isothermally compress oxygen, which has a volume of 500 liters, a pressure of $10^{6}\,Pa$, and a temperature of $30{}^{\circ}C$, to one-fifth of its original volume.
+\begin{enumerate}
+\item[(a)] How much work do we perform during compression?
+\item[(b)] What is the amount of heat absorbed by the gas
+\item[(c)] and the change in internal energy?
+\item[(d)] What will be the pressure of the gas at the end of the process?
+\end{enumerate}
+
+\pagebreak
+\begin{columns}
+\begin{column}{0.5\linewidth}
+\begin{center}
+\begin{tikzpicture}[scale=0.8]
+    % Tengelyek rajzolása határozott nyilakkal a végükön
+    \draw[thick, -{Stealth[length=3mm]}] (0,0) -- (5,0) node[right] {$V \, [m^3]$};
+    \draw[thick, -{Stealth[length=3mm]}] (0,0) -- (0,5) node[above] {$p \, [Pa]$};
+
+    % Pontok koordinátái
+    \coordinate (state1) at (1, 1.5);
+    \coordinate (state2) at (4, 4);
+
+    % Az állapotokat összekötő barna nyíl
+    \draw[brown, line width=1.2pt, -{Stealth[length=3mm]}] (state1) -- (state2);
+
+    % Piros karikák (állapotok)
+    \draw[red, fill=white, thick] (state1) circle (3pt) node[below left, black] {1};
+    \draw[red, fill=white, thick] (state2) circle (3pt) node[above right, black] {2};
+
+\end{tikzpicture}
+\end{center}
+\end{column}
+\begin{column}{0.5\linewidth}
+\item We transport a certain amount of air from state 1 to state 2 according to the figure. Does the temperature of the air increase or decrease during the process? How much work does the gas perform during the process if $p_{1} = 10^{5}\,Pa$, $p_{2} = 1.4 \cdot 10^{5}\,Pa$, $V_{1} = 0.07\,m^{3}$, $V_{2} = 0.11\,m^{3}$?
+\end{column}
+\end{columns}
+
+\end{enumerate}
+
+\end{itemize}
+
+\end{frame}
+
+% ----------------------------------------------------------------------------------------------------------------------------------------
+
+\begin{frame}
+%\frametitle{Minden jó, ha a vége jó}
+
+\vfill
+\begin{center}
+\textbf{\huge The End}
+
+\bigskip
+Thank you for your attention!
+\end{center}
+\vfill
+%\textbf{Acknowledgements} Thank you for the course materials for Szilárd~ZSÓKA and Zoltán~VARGA.
+\end{frame}
+
+\end{document}

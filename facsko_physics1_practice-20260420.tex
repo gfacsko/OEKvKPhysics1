@@ -1,0 +1,295 @@
+\documentclass[t,aspectratio=169]{beamer}
+
+\usepackage{soul}
+\usepackage{tikz}
+\usepackage{multicol}
+%\usepackage{gensymb}
+\usepackage[utf8]{inputenc}
+
+\usetikzlibrary{arrows.meta,decorations.markings}
+
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    pdftitle={(KTXFI1EBNF) Physics I. Practice},
+}
+
+% ----------------------------------------------------------------------------------------------------------------------------------------
+
+\title{\includegraphics[width=45pt]{oepecsetlogo.png}\\(KTXFI1EBNF) Physics I. Practice}
+
+\author{Dr.~Gábor FACSKÓ, PhD\\\tiny Assistant Professor / Senior Research Fellow\\\textit{facsko.gabor@uni-obuda.hu}}
+
+\institute{\Tiny Óbuda University, Faculty of Electrical Engineering, 1084 Budapest, Tavaszmező u. 17.\\Wigner Research Centre for Physics, Department of Space Physics and Space Technology, 1121 Budapest, Konkoly-Thege Miklós út 29–33.\\ \url{https://wigner.hu/~facsko.gabor}}
+
+\date{April~20,~2026}
+
+\logo{\includegraphics[height=0.9 true cm]{kekcsik.png}}
+
+% ----------------------------------------------------------------------------------------------------------------------------------------
+
+\begin{document}
+
+\frame{\titlepage}
+
+% ----------------------------------------------------------------------------------------------------------------------------------------
+
+\begin{frame}[fragile,squeeze,allowframebreaks]
+\frametitle{Exercises}
+\begin{itemize}
+\setlength{\parskip}{0pt}
+\setlength{\itemsep}{0pt}
+\item \textbf{Thermodynamics I:} Temperature scales, thermal expansion, thermometers. State variables, ideal gas, state changes, ideal gas equation of state, Boyle’s law, Gay-Lussac’s laws, universal (combined) gas law, heat, specific heat, molar heat, heat capacity.
+\item \textbf{Thermodynamics II:} Expansion work, internal energy, the first law of thermodynamics, forms of the first law in different state changes.
+\item \textbf{Thermodynamics III:} Cyclic processes, Carnot cycle, Carnot’s theorem, reduced heat, entropy, the second law of thermodynamics.
+\item \textbf{Thermodynamics IV:} Kinetic theory of gases, molecular thermodynamics. Distributions, distribution functions. Elementary statistics.
+\item \textbf{Electrostatics I.:} Electric charge: Fundamental electrical phenomena, electric charge and matter, Coulomb’s law (force between two point charges, unit of electric charge, permittivity of vacuum).
+
+\pagebreak
+\item \textbf{Electrostatics II.:} The electric field: The electrostatic field (electric field strength, electric field lines). Determination of electric field strength. Gauss’s law (flux of the electric field). Electric field of a point charge.
+\item \textbf{Electrostatics III.:} Electrostatic potential: Work of the electric field (work done in an electric field). Electric potential (electrostatic potential). Electric potential difference, voltage. Electric potential of charge systems at small and large distances. Electrostatic energy.
+  
+\pagebreak
+\item Problems:
+\begin{enumerate}
+\setcounter{enumi}{11}
+
+\item Considering an air conditioner with a power of $P = 800\,\mathrm{W},$ a performance factor $\varepsilon = 2.8,$ and temperatures $t_1 = 21^\circ\mathrm{C}, \quad t_2 = 35^\circ\mathrm{C}.$
+\begin{enumerate}
+\item[a.)] What is the heat removal per second?
+\item[b.)] What is the heat transferred to the environment per second?
+\item[c.)] What is the entropy change of the room and the external environment per hour?
+\item[d.)] What is the combined entropy change of the room and the external environment?
+\end{enumerate}
+
+
+%The absolute temperatures are
+%$$ T_1 = 294\,\mathrm{K}, \qquad T_2 = 308\,\mathrm{K}. $$
+
+%For an air conditioner,
+%$$ \varepsilon = \frac{Q_{\mathrm{cold}}}{W}. $$
+
+$$ T_1 = 273\,K + 21^{\circ}C = 294\,K, \qquad T_2 = 273\,K + 35^{\circ}C = 308\,K.$$
+$$P =  \frac{W}{t} = 800\,W,\qquad\varepsilon =  \frac{Q_{\mathrm{cold}}}{W}=2.8,\qquad t = 3600\,s.$$
+
+\pagebreak
+a) Heat removal per second
+
+For an air conditioner, the coefficient of performance is
+$$ \varepsilon = \frac{Q_1}{W}.$$
+Since,
+$$ P = \frac{W}{t},\qquad P_1 = \frac{Q_1}{t},$$
+we obtain
+$$\varepsilon = \frac{Q_1}{W} = \frac{P_1 t}{P t} = \frac{P_1}{P}.$$
+Thus,
+$$P_1 = P \varepsilon = 800\,W \cdot 2.8 = 2240\,J/s.$$
+\vskip -10 pt
+$$\boxed{P_1 = 2240\,W}$$
+
+
+\pagebreak
+b) Heat transferred to the environment per second
+
+The heat removed from the room in one second is
+$$Q_1 = P_1 \cdot 1\,s = 2240\,J.$$
+The heat delivered to the environment per second is
+$$ P_2 = P + P_1 = 800\,W + 2240\,W = 3040\,W.$$
+
+$$ \boxed{P_2 = 3040\,W}$$
+
+\pagebreak
+c) Entropy change of the room and environment per hour
+
+Let
+$$ \Delta t = 3600\,\mathrm{s}. $$
+
+The heat removed from the room in one hour:
+$$ Q_{\mathrm{cold}} = \dot Q_{\mathrm{cold}} \Delta t
+= 2240\,J/s \cdot 3600\,s
+= 8.064 \times 10^6\,\mathrm{J}. $$
+
+The heat transferred to the environment in one hour:
+$$ Q_{\mathrm{hot}} = \dot Q_{\mathrm{hot}} \Delta t
+= 3040\,J/s \cdot 3600\,s
+= 1.0944 \cdot 10^7\,\mathrm{J}.$$
+
+Entropy change of the room:
+$$ \Delta S_{\mathrm{room}} = -\frac{Q_{\mathrm{cold}}}{T_1}
+= -\frac{8.064\cdot 10^6\,J}{294\,K}
+= -2.7429\cdot 10^4\,\mathrm{J/K}. $$
+
+
+The room loses heat, so its entropy decreases:
+$$\Delta S_1 = -\frac{Q_1^{(\text{1 hour})}}{T_1}
+= -\frac{P_1 t}{T_1}.$$
+
+Substituting the data:
+$$\Delta S_1 = -\frac{2240 \cdot 3600}{294}
+= -27428.57\,J/K.$$
+
+$$\boxed{\Delta S_1 = -2.74\cdot10^4\,J/K}$$
+
+The environment receives
+$$Q_2^{(\text{1 hour})} = P_2 t = 3040\,W \cdot 3600\,s
+= 1.0944\cdot10^7\,J.$$
+Hence its entropy change is
+$$ \Delta S_2 = \frac{Q_2^{(\text{1 hour})}}{T_2}
+= \frac{1.0944 \times 10^7}{308}
+= 35532.47\,J/K.$$
+
+$$\boxed{\Delta S_2 = 3.55\cdot10^4\,J/K}$$
+
+
+
+
+
+
+
+
+\pagebreak
+So,
+$$ \boxed{\Delta S_{\mathrm{room}} \approx -2.74\cdot 10^4\,\mathrm{J/K}}$$
+
+Entropy change of the environment:
+$$ \Delta S_{\mathrm{env}} = \frac{Q_{\mathrm{hot}}}{T_2}
+= \frac{1.0944\cdot 10^7\,J}{308\,K}
+= 3.5532\cdot 10^4\,\mathrm{J/K}.$$
+
+So,
+$$ \boxed{\Delta S_{\mathrm{env}} \approx 3.55\cdot 10^4\,\mathrm{J/K}}$$
+
+d) Total entropy change
+
+$$\Delta S_{\mathrm{total}} =
+\Delta S_{\mathrm{room}} + \Delta S_{\mathrm{env}}$$
+$$\Delta S_{\mathrm{total}}
+= -2.7429\cdot 10^4\,J/K+ 3.5532\cdot 10^4\,J/K
+= 8.1039\cdot 10^3\,\mathrm{J/K}.$$
+
+\pagebreak
+$$\boxed{\Delta S_{\mathrm{total}} \approx 8.10\cdot 10^3\,\mathrm{J/K}}$$
+
+$$\Delta S = \Delta S_1 + \Delta S_2
+= -27428.57\,J/K+ 35532.47\,J/K
+= 8103.90\,J/K.$$
+
+$$\boxed{\Delta S \sim 8\cdot10^33\,J/K}$$
+
+% ----------------------------------------------------------------------------------------------------------------------------------------
+
+\pagebreak
+\item What is the entropy change if the volume of $ m = 8\,\mathrm{g} $ of oxygen changes from $ V_1 = 10\,\mathrm{l} \qquad \text{to} \qquad V_2 = 40\,\mathrm{l},$ and its temperature changes from $t_1 = 80^\circ\mathrm{C} \qquad \text{to} \qquad t_2 = 300^\circ\mathrm{C}?$. The molar mass is $ M = 32\,\mathrm{g/mol}.$
+  
+\bigskip  
+Absolute temperatures:
+$$ T_1 = 353\,\mathrm{K}, \qquad T_2 = 573\,\mathrm{K}. $$
+
+Number of moles:
+$$ n = \frac{m}{M} = \frac{8}{32} = 0.25\,\mathrm{mol}. $$
+
+\pagebreak
+For an ideal diatomic gas,
+$$ C_V = \frac{5}{2}R. $$
+
+The entropy change is 
+$$\Delta S = n C_V \ln\!\left(\frac{T_2}{T_1}\right)
++ nR \ln\!\left(\frac{V_2}{V_1}\right). $$
+
+Substituting:
+$$ \Delta S =
+0.25 \cdot \frac{5}{2}R \ln\!\left(\frac{573}{353}\right)
++ 0.25 \cdot R \ln\!\left(\frac{40}{10}\right). $$
+
+Using
+$$ R = 8.314\,\mathrm{J/(mol\,K)}, $$
+
+\pagebreak
+we get
+$$ \Delta S \approx 5.40\,\mathrm{J/K}. $$
+
+$$ \boxed{\Delta S \approx 5.4\,\mathrm{J/K}}$$
+
+% ----------------------------------------------------------------------------------------------------------------------------------------
+
+\pagebreak
+\item We store one mole of monatomic ideal gas in a $V_1 = 4\,\mathrm{L} = 4\cdot 10^{-3}\,\mathrm{m}^3$ container at $t_1 = 300^\circ\mathrm{C}.$ Then we place it in a $V_2 = 200\,\mathrm{L} = 0.2\,\mathrm{m}^3$ tank and release the gas. The initial absolute temperature is $T_1 = 573\,\mathrm{K}.$
+  \begin{enumerate}
+  \item[a.)] What is the initial pressure?
+\item[b.)] What will be the final temperature if the expansion is adiabatic?
+\item[c.)] What is the entropy change if the process is isothermal?
+  \end{enumerate}
+
+  
+  \bigskip
+  
+a) Initial pressure
+
+For an ideal gas,
+$$p_1 V_1 = nRT_1.$$
+Hence, $$ p_1 = \frac{nRT_1}{V_1}.$$
+
+\pagebreak
+Substitute the data:
+$$ p_1 = \frac{1 \cdot 8.314 \cdot 573}{4\cdot 10^{-3}}= 1.19\cdot 10^6\,\mathrm{Pa}.$$
+
+$$\boxed{p_1 \approx 1.19\cdot 10^6\,\mathrm{Pa}}$$
+
+b) Final temperature for adiabatic expansion
+
+For a monatomic ideal gas,
+$$ \gamma = \frac{5}{3}. $$
+
+For an adiabatic process,
+$$ TV^{\gamma-1} = \text{constant}. $$
+
+\pagebreak
+Thus,
+$$ T_2 = T_1 \left(\frac{V_1}{V_2}\right)^{\gamma-1}= 573\,K \left(\frac{0.004\,m^{3}}{0.2\,m^{3}}\right)^{2/3}.$$
+
+Therefore,
+$$T_2 \approx 42.2\,\mathrm{K}.$$
+
+$$\boxed{T_2 \approx 42.2\,\mathrm{K}}$$
+
+Entropy change for isothermal expansion
+
+For an isothermal ideal-gas expansion,
+$$ \Delta S = nR \ln\!\left(\frac{V_2}{V_1}\right).$$
+
+\pagebreak
+So,
+$$\Delta S = 1 \cdot 8.314\,J/K \ln\!\left(\frac{0.2\,m^{3}}{0.004\,m^{3}}\right).$$
+
+Hence,
+$$\Delta S \approx 32.5\,\mathrm{J/K}.$$
+
+$$\boxed{\Delta S \approx 32.5\,\mathrm{J/K}}$$
+
+
+\end{enumerate}
+
+\end{itemize}
+
+\end{frame}
+
+% ----------------------------------------------------------------------------------------------------------------------------------------
+
+\begin{frame}
+%\frametitle{Minden jó, ha a vége jó}
+
+\vfill
+\begin{center}
+\textbf{\huge The End}
+
+\bigskip
+Thank you for your attention!
+\end{center}
+\vfill
+%\textbf{Acknowledgements} Thank you for the course materials for Szilárd~ZSÓKA and Zoltán~VARGA.
+\end{frame}
+
+\end{document}
